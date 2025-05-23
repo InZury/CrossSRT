@@ -1,0 +1,27 @@
+pretrained:
+  model_path: "spynet_sintel_final-3d2a1287.pth"
+
+parameters:
+  upscale: 4
+  in_channels: 3
+  out_channels: 3
+
+  image_size: [ 6, 64, 64 ]  # [frames, height, width]
+  window_size: [ 6, 8, 8 ]   # [depth, height, width]
+  depths: [ 8, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 4, 4 ]
+  flatten_layer: [ 11, 12 ]
+  dimensions: [ 120, 120, 120, 120, 120, 120, 120, 180, 180, 180, 180, 180, 180 ]
+  num_heads: 6
+  mul_ratio: 0.75
+  mlp_ratio: 2.0
+  qkv_bias: True
+  qk_scale: None
+  drop_path: 0.2
+  parallel_frame: 2
+  deformable_groups: 12
+  realign_all_flows: False
+  non_blind_denoising: False
+  use_attention_checkpoint: False
+  use_feed_forward_checkpoint: False
+  except_attention_checkpoint: [ ]
+  except_feed_forward_checkpoint: [ ]
